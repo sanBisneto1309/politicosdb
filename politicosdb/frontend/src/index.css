@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { box-sizing: border-box; }
+
+  body {
+    @apply bg-gray-50 text-gray-900 font-sans;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  :root {
+    --green:       #1D9E75;
+    --green-light: #E1F5EE;
+    --green-dark:  #085041;
+    --amber:       #BA7517;
+    --amber-light: #FAEEDA;
+    --coral:       #D85A30;
+    --coral-light: #FAECE7;
+    --blue:        #185FA5;
+    --blue-light:  #E6F1FB;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-green text-white font-semibold px-4 py-2 rounded-lg hover:bg-green-dark transition-colors text-sm;
+  }
+
+  .btn-outline {
+    @apply border border-gray-200 text-gray-600 font-medium px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors text-sm;
+  }
+
+  .card {
+    @apply bg-white border border-gray-200 rounded-xl p-4 hover:border-green transition-colors;
+  }
+
+  .badge {
+    @apply font-mono text-xs px-2 py-0.5 rounded;
+  }
+
+  .tag-eleito     { @apply bg-green-light text-green-dark text-xs font-mono px-2 py-0.5 rounded; }
+  .tag-nao-eleito { @apply bg-gray-100 text-gray-500 text-xs font-mono px-2 py-0.5 rounded; }
+  .tag-suplente   { @apply bg-amber-light text-amber text-xs font-mono px-2 py-0.5 rounded; }
+
+  .stat-card {
+    @apply bg-gray-100 rounded-lg p-3;
+  }
+}
